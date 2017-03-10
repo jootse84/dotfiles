@@ -24,7 +24,6 @@ Bundle 'gmarik/vundle'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " front-end plugins, coffeescript, less and jst (ejs) templates
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 Bundle 'briancollins/vim-jst'
 
@@ -165,6 +164,10 @@ autocmd BufNewFile,BufReadPost *  let @/ = ""
 map j gj
 map k gk
 
+" Remap :W and :Q to save and exit
+cmap W w
+cmap Q q
+
 "folding
 " set foldmethod=syntax
 " set foldcolumn=1
@@ -173,16 +176,6 @@ map k gk
 "upper case letter, then it's case sensitive
 set ignorecase
 set smartcase
-
-"""""""" coffeescript
-"map <F6> to save and compile the file
-noremap <leader>cm :w <bar> CoffeeMake<CR>
-inoremap <leader>cm <esc>:w <bar> CoffeeMake<CR>
-
-"map <F7> to save and compile the file in bare mode
-nmap <F7> :w <bar> CoffeeMake -b<CR>
-imap <F7> <c-o>:w <bar> CoffeeMake -b<CR>
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 
 """""""" CtrlP
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
