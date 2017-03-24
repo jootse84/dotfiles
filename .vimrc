@@ -185,6 +185,7 @@ let g:ctrlp_working_path_mode = 'ra'
 noremap <leader>p :CtrlP .<cr>
 noremap <c-p> :CtrlP .<cr>
 let g:ctrlp_root_markers = ['.git, .svn']
+let g:indentLine_noConcealCursor=""
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
