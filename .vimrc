@@ -150,7 +150,7 @@ nnoremap p ]p
 set hlsearch
 
 "set window to fullscreen
-set lines=100 columns=400
+"set lines=100 columns=400
 
 "to clear highlight search
 nnoremap <F5> :let @/ = ""<CR>
